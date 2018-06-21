@@ -10,6 +10,15 @@ app.get('/api/users', function(req, res){
   res.status(200).json([]);
 });
 
-app.listen(8080, function(){
-  console.log('Server corriendo en localhost:8080');
+mongoose.connect(db, err => {
+  if (err) {
+      console.log(err);
+  }
+  app.listen(8080, () => {
+    console.log('Server corriendo en localhost:8080');
+  })
+  .on('error', err => {
+      mongoose.disconnect();
+      console.log(err);
+  });
 });
