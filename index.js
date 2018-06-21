@@ -1,5 +1,9 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
+
 const app = express();
+app.use(jsonParser);
 
 app.get('/api/users', function(req, res){
   console.log('Muestra todos los usuarios');

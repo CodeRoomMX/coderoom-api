@@ -12,6 +12,7 @@
   * [**express**](https://www.npmjs.com/package/express)
   * [**mongoose**](https://www.npmjs.com/package/mongoose)
   * [**bcryptjs**](https://www.npmjs.com/package/bcryptjs)
+  * [**body-parser**](https://www.npmjs.com/package/body-parser)
 
 3. Corre `mongod` en otra ventana.
 
