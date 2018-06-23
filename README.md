@@ -57,3 +57,15 @@ Borrar el usuario identificado por el id.
 **Es importante que en cualquier momento que modifiques el password, este sea encriptado con bcrypt.**
 
 6. Procura ir probando tus endpoints uno a uno, para evitar tener que construir un cliente que consuma esos servicios, usaremos la herramienta postman que nos permite hacer estas consultas a cualquier API de manera rápida y sencilla.
+
+## Cómo usar Postman
+### Crear un usuario
+![Create Endpoint](assets/post.png)
+### Obtener todos los usuarios
+![Create Endpoint](assets/get.png)
+### Obtener un usuario por su id
+![Create Endpoint](assets/getbyid.png)
+### Actualizar un usuario
+![Create Endpoint](assets/put.png)
+### Borrar un usuario
+![Create Endpoint](assets/delete.png)
