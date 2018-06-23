@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose  = require('mongoose');
 const jsonParser = bodyParser.json();
 
 const app = express();
@@ -10,7 +11,7 @@ app.get('/api/users', function(req, res){
   res.status(200).json([]);
 });
 
-mongoose.connect(db, err => {
+mongoose.connect('mongodb://localhost/coderoom-api', err => {
   if (err) {
       console.log(err);
   }
