@@ -55,9 +55,14 @@ app.put('/api/users/:id', function(req, res){
 
   hashPromise
   .then(hashed => {
+    const fields = ['password', 'username'];
     let updateObject = {};
-    if(req.body.username) updateObject.username = req.body.username;
-    if(hashed) updateObject.password = hashed;
+    fields.forEach(field => {
+      if(req.body[field]){
+        updateObj[field] = req.body[field];
+      }
+      if(hashed) updateObject.password = hashed;
+    })
     return User.findOneAndUpdate({ _id: req.params.id }, updateObject, {new: true, upsert: true});
   })
   .then(user => {
